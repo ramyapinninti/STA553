@@ -4503,10 +4503,10 @@ of financial success.</p>
 <pre class="r"><code># Increase left margin for safety
 par(mar = c(10, 8, 4, 2))
 
-# Compute pretty tick marks
+
 ticks &lt;- pretty(df$Gross)
 
-# Boxplot without default y-axis
+
 boxplot(Gross ~ Genre, data = df,
         main = &quot;Distribution of Gross Revenue by Genre&quot;,
         ylab = &quot;Gross Revenue (Millions USD)&quot;,
@@ -4518,7 +4518,7 @@ boxplot(Gross ~ Genre, data = df,
         frame.plot = FALSE,
         yaxt = &quot;n&quot;)   # turn off default y-axis
 
-# Add custom axis in millions
+#
 axis(2,
      at = ticks,
      labels = paste0(round(ticks / 1e6), &quot;M&quot;),
